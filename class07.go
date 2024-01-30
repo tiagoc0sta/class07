@@ -17,6 +17,8 @@ func main() {
 	checkWeatherMoney()
 	happy()
 	salaryDate()	
+	//energy()
+	birthday()
 }
 
 func checkBalance(){ 
@@ -205,3 +207,48 @@ func checkMoney() {
 	}
  
  }
+
+ func energy() {
+
+	var energyLevel int
+	var bucketListItem string
+ 
+	fmt.Print("Enter your energy level (0-100)")
+ 
+	fmt.Scanln(&energyLevel)
+ 
+	fmt.Print("Enter your bucket list item (skydiving, marathon, olympics, world tour, luxury world tour)")
+ 
+	fmt.Scanln(&bucketListItem)
+ 
+	if energyLevel >= 70 && (bucketListItem == "skydiving" || bucketListItem == "marathon" || bucketListItem == "olympics") {
+	 fmt.Println("With your energy level, you can plan several active bucket list items")
+	} else if energyLevel >= 70 && bucketListItem == "world tour" {
+	 fmt.Println("With your energy level, you can go on a world tour")
+	} else if energyLevel >= 80 && bucketListItem == "luxury world tour" {
+	 fmt.Println("With your energy level, you can go on a luxury world tour")
+	} else if energyLevel >= 70 {
+	 fmt.Println("With your energy level, you can decide whatever item you would like")
+	} else {
+	 fmt.Println("Your energy level is too low, get some rest!!")
+	}
+ 
+ }
+
+ func birthday(){
+	hasCake := true
+	holiday := "birthday"
+
+	if hasCake && holiday == "birthday" {
+			fmt.Println("You have cake on your birthday! Enjoy the celebration.")
+	} else if hasCake && holiday == "anniversary" {
+			fmt.Println("You have cake on your anniversary! Celebrate your special day.")
+	} else if hasCake && holiday == "Christmas" {
+			fmt.Println("You have cake for Christmas! Savor the festive spirit.")
+	} else if hasCake {
+			fmt.Println("You have cake for an unspecified holiday. Enjoy the sweet surprise!")
+	} else {
+			fmt.Println("There's no cake for this holiday. Consider getting one to celebrate.")
+	}
+ }
+
