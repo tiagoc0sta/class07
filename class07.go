@@ -16,6 +16,7 @@ func main() {
 	watching()
 	checkWeatherMoney()
 	happy()
+	salaryDate()	
 }
 
 func checkBalance(){ 
@@ -176,4 +177,31 @@ func checkMoney() {
 	 fmt.Println("third block")
  
 	}
+ }
+
+ func salaryDate() {
+
+	salary := 10
+	dateIdea := "surprise world tour"
+ 
+	if salary >= 1000 && (dateIdea == "bowling" || dateIdea == "steak dinner" || dateIdea == "skydiving") {
+ 
+	 fmt.Println("With your salary, you can afford a fun date")
+ 
+	} else if salary >= 1000 && dateIdea == "surprise world tour" {
+ 
+	 fmt.Println("You can afford a surprise world tour")
+ 
+	} else if salary >= 5000 && dateIdea == "luxury world tour" {
+ 
+	 fmt.Println("You can afford a luxury world tour")
+ 
+	} else if salary >= 1000 {
+ 
+	 fmt.Println("You have enough for a nice date")
+ 
+	} else {
+	 fmt.Println("heheheheh no")
+	}
+ 
  }
