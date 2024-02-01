@@ -19,6 +19,7 @@ func main() {
 	salaryDate()	
 	//energy()
 	birthday()
+	quiz01()
 }
 
 func checkBalance(){ 
@@ -252,3 +253,37 @@ func checkMoney() {
 	}
  }
 
+
+ func quiz01(){
+	
+	// Get input from the user or set them programmatically
+	var budget int
+	var flowerChoice string
+
+	fmt.Print("Enter your budget: ")
+	fmt.Scan(&budget)
+
+	fmt.Print("Enter your flower choice: ")
+	fmt.Scan(&flowerChoice)
+
+	// Conditions 
+	if budget < 1000 {
+		fmt.Println("Your budget is too low for the mentioned types of flowers. Consider opting for more budget-friendly options.")
+	} else if budget >= 1000 && budget < 5000 {
+		switch flowerChoice {
+		case "roses", "tulips", "lilies":
+			fmt.Println("With your budget, you can afford beautiful flowers. Enjoy your choice!")
+		case "exotic orchids":
+			fmt.Println("With your budget, you can go for exotic orchids. They'll make a unique and impressive gift!")
+		default:
+			fmt.Println("You have enough for a wonderful choice of flowers, but the type is unspecified. Choose your flowers and enjoy!")
+		}
+	} else if budget >= 5000 && flowerChoice == "luxury flower arrangement" {
+		fmt.Println("You can afford a luxury flower arrangement for a truly special occasion. Make it memorable!")
+	} else {
+		fmt.Println("Invalid input. Please check your budget and flower choice.")
+	}
+}
+
+ 
+ 
